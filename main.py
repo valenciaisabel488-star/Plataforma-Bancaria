@@ -1,7 +1,9 @@
 from controllers.cliente_controller import ClienteController
+from controllers.cuenta_controller import CuentaController
 
 
-controller = ClienteController()
+cliente_controller = ClienteController()
+cuenta_controller = CuentaController()
 
 
 while True:
@@ -14,43 +16,52 @@ while True:
     print("3. Buscar cliente")
     print("4. Actualizar cliente")
     print("5. Eliminar cliente")
-    print("6. Salir")
+    print("-----------------------------------")
+    print("6. Crear cuenta")
+    print("7. Listar cuentas")
+    print("8. Buscar cuenta")
+    print("9. Actualizar cuenta")
+    print("10. Eliminar cuenta")
+    print("-----------------------------------")
+    print("11. Salir")
 
 
     opcion = input("\nSeleccione una opción: ")
 
 
     if opcion == "1":
-
-        controller.registrar_cliente()
-
+        cliente_controller.registrar_cliente()
 
     elif opcion == "2":
-
-        controller.listar_clientes()
-
+        cliente_controller.listar_clientes()
 
     elif opcion == "3":
-
-        controller.buscar_cliente()
-
+        cliente_controller.buscar_cliente()
 
     elif opcion == "4":
-
-        controller.actualizar_cliente()
-
+        cliente_controller.actualizar_cliente()
 
     elif opcion == "5":
-
-        controller.eliminar_cliente()
-
+        cliente_controller.eliminar_cliente()
 
     elif opcion == "6":
+        cuenta_controller.crear_cuenta()
 
+    elif opcion == "7":
+        cuenta_controller.listar_cuentas()
+
+    elif opcion == "8":
+        cuenta_controller.buscar_cuenta()
+
+    elif opcion == "9":
+        cuenta_controller.actualizar_cuenta()
+
+    elif opcion == "10":
+        cuenta_controller.eliminar_cuenta()
+
+    elif opcion == "11":
         print("\n¡Hasta luego!")
         break
 
-
     else:
-
         print("\n❌ Opción inválida.")
