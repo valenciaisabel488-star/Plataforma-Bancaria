@@ -1,8 +1,8 @@
 # 🏦 Plataforma Bancaria
 
 ![Estado](https://img.shields.io/badge/Estado-En%20desarrollo-blue)
-![Lenguaje](https://img.shields.io/badge/Python-3.x-yellow)
-![Base de datos](https://img.shields.io/badge/Almacenamiento-JSON-green)
+![Lenguaje](https://img.shields.io/badge/Lenguaje-Python-yellow)
+![Almacenamiento](https://img.shields.io/badge/Almacenamiento-JSON-green)
 
 ---
 
@@ -12,13 +12,13 @@
 
 Sistema desarrollado para la gestión básica de procesos bancarios, permitiendo administrar clientes y cuentas mediante operaciones CRUD (Crear, Leer, Actualizar y Eliminar).
 
-El proyecto busca implementar una solución organizada utilizando programación orientada a objetos, separación por capas y manejo de información mediante archivos JSON.
+El proyecto implementa una solución organizada utilizando programación orientada a objetos, separación por módulos y almacenamiento de información mediante archivos JSON.
 
 ---
 
-# 👩‍💻 Integrantes
+# 👩‍💻 Integrantes del Proyecto
 
-| Nombre | Rol |
+| Integrante | Rol |
 |---|---|
 | Michel | Desarrollo del sistema |
 | Daniela | Desarrollo y documentación |
@@ -26,7 +26,7 @@ El proyecto busca implementar una solución organizada utilizando programación 
 
 ---
 
-# 🎓 Formación
+# 🎓 Información Académica
 
 **Programa:** Análisis y Desarrollo de Software (ADSO)  
 **Ficha:** 3406451  
@@ -36,18 +36,22 @@ El proyecto busca implementar una solución organizada utilizando programación 
 
 # 📖 Descripción del Proyecto
 
-La Plataforma Bancaria es una aplicación desarrollada en Python que permite gestionar información relacionada con clientes y cuentas bancarias.
+La Plataforma Bancaria es una aplicación desarrollada en lenguaje Python orientada a la administración de información bancaria básica.
 
-El sistema cuenta con módulos independientes que facilitan el mantenimiento del código y permiten ampliar nuevas funcionalidades en el futuro.
+El sistema permite gestionar clientes y cuentas mediante módulos independientes, facilitando la organización del código, mantenimiento del sistema y futuras ampliaciones.
+
+La aplicación implementa operaciones CRUD para administrar la información almacenada.
 
 Actualmente permite:
 
 - Registrar clientes.
-- Consultar clientes.
-- Actualizar información de clientes.
+- Listar clientes.
+- Buscar clientes.
+- Actualizar clientes.
 - Eliminar clientes.
 - Crear cuentas bancarias.
-- Consultar cuentas.
+- Listar cuentas.
+- Buscar cuentas.
 - Actualizar cuentas.
 - Eliminar cuentas.
 
@@ -55,7 +59,7 @@ Actualmente permite:
 
 # 🎯 Objetivo General
 
-Desarrollar una plataforma bancaria básica que permita administrar clientes y cuentas mediante operaciones CRUD, aplicando conceptos de programación orientada a objetos y buenas prácticas de desarrollo de software.
+Desarrollar una plataforma bancaria básica que permita administrar clientes y cuentas mediante operaciones CRUD, aplicando principios de programación orientada a objetos, organización modular y buenas prácticas de desarrollo de software.
 
 ---
 
@@ -64,52 +68,49 @@ Desarrollar una plataforma bancaria básica que permita administrar clientes y c
 - Diseñar una estructura organizada del proyecto.
 - Implementar clases utilizando programación orientada a objetos.
 - Crear controladores para manejar la lógica del sistema.
-- Implementar almacenamiento de información utilizando archivos JSON.
-- Aplicar control de versiones mediante Git y GitHub.
-- Integrar módulos mediante ramas de desarrollo.
+- Gestionar información mediante archivos JSON.
+- Implementar operaciones CRUD completas.
+- Aplicar control de versiones utilizando Git y GitHub.
+- Trabajar mediante ramas y procesos de integración.
+- Documentar el desarrollo del proyecto.
 
 ---
 
 # 🏗️ Arquitectura del Proyecto
 
-El sistema está organizado utilizando una estructura basada en modelos y controladores.
-
-```
+El sistema está organizado mediante una arquitectura basada en modelos y controladores.
 Plataforma-Bancaria
 
 │
 ├── controllers
-│   ├── cliente_controller.py
-│   └── cuenta_controller.py
+│ ├── cliente_controller.py
+│ └── cuenta_controller.py
 │
 ├── models
-│   ├── cliente.py
-│   └── cuenta.py
+│ ├── cliente.py
+│ └── cuenta.py
 │
 ├── data
-│   ├── clientes.json
-│   └── cuentas.json
+│ ├── clientes.json
+│ └── cuentas.json
 │
 ├── main.py
 │
 ├── requirements.txt
 │
 └── README.md
-```
 
 ---
 
-# 📂 Descripción de Carpetas
+# 📂 Estructura del Sistema
 
-## controllers
+## 📁 controllers
 
-Contiene la lógica del sistema.
-
-Incluye:
+Esta carpeta contiene la lógica principal del sistema.
 
 ### ClienteController
 
-Responsable de:
+Permite administrar los procesos relacionados con clientes:
 
 - Registrar clientes.
 - Listar clientes.
@@ -117,10 +118,11 @@ Responsable de:
 - Actualizar clientes.
 - Eliminar clientes.
 
+---
 
 ### CuentaController
 
-Responsable de:
+Permite administrar los procesos relacionados con cuentas:
 
 - Crear cuentas.
 - Listar cuentas.
@@ -132,55 +134,65 @@ Responsable de:
 
 # 📦 Models
 
-Contiene las clases principales del sistema.
+Contiene las clases principales utilizadas dentro del sistema.
 
-## Clase Cliente
+---
 
-Representa la información de los usuarios registrados.
+## 👤 Clase Cliente
 
-Atributos principales:
+Representa la información de los clientes registrados.
 
-- Documento
-- Nombre
-- Apellido
-- Fecha de nacimiento
-- Correo
-- Teléfono
-- Dirección
+### Atributos:
 
+- Documento.
+- Nombre.
+- Apellido.
+- Fecha de nacimiento.
+- Correo.
+- Teléfono.
+- Dirección.
 
-## Clase Cuenta
+---
 
-Representa una cuenta bancaria.
+## 💳 Clase Cuenta
 
-Atributos principales:
+Representa la información de las cuentas bancarias.
 
-- Número de cuenta
-- Tipo de cuenta
-- Saldo
-- Cliente asociado
+### Atributos:
+
+- Número de cuenta.
+- Tipo de cuenta.
+- Saldo.
+- Cliente asociado.
 
 ---
 
 # 💻 Tecnologías Utilizadas
 
-## Lenguaje
+## Lenguaje de programación
 
 🐍 Python
 
-## Herramientas
+---
 
-- Visual Studio Code
-- Git
-- GitHub
-- PowerShell
+## Herramientas utilizadas
 
-## Almacenamiento
+- Visual Studio Code.
+- Git.
+- GitHub.
+- PowerShell.
 
-Archivos JSON:
+---
 
-- clientes.json
-- cuentas.json
+## Almacenamiento de información
+
+El sistema utiliza archivos JSON:
+data/
+
+├── clientes.json
+└── cuentas.json
+
+Estos archivos permiten guardar y consultar la información registrada.
 
 ---
 
@@ -188,23 +200,36 @@ Archivos JSON:
 
 # 👤 Módulo de Clientes
 
-## Registrar cliente
+## Registrar Cliente
 
-Permite ingresar nuevos clientes validando que el documento no exista previamente.
+Permite ingresar nuevos clientes al sistema.
 
-## Listar clientes
+Validaciones:
 
-Muestra todos los clientes registrados.
+- Verificación de documento existente.
+- Almacenamiento de información personal.
 
-## Buscar cliente
+---
 
-Permite consultar un cliente mediante su documento.
+## Listar Clientes
 
-## Actualizar cliente
+Permite visualizar todos los clientes registrados.
 
-Permite modificar información almacenada.
+---
 
-## Eliminar cliente
+## Buscar Cliente
+
+Permite encontrar un cliente mediante su documento.
+
+---
+
+## Actualizar Cliente
+
+Permite modificar la información almacenada de un cliente.
+
+---
+
+## Eliminar Cliente
 
 Permite eliminar registros existentes.
 
@@ -212,137 +237,51 @@ Permite eliminar registros existentes.
 
 # 💳 Módulo de Cuentas
 
-## Crear cuenta
+## Crear Cuenta
 
-Permite asociar una cuenta bancaria a un cliente.
+Permite crear una cuenta bancaria asociada a un cliente.
 
-## Listar cuentas
+---
 
-Muestra las cuentas registradas.
+## Listar Cuentas
 
-## Buscar cuenta
+Permite visualizar las cuentas registradas.
+
+---
+
+## Buscar Cuenta
 
 Permite consultar una cuenta específica.
 
-## Actualizar cuenta
+---
 
-Permite modificar información de una cuenta.
+## Actualizar Cuenta
 
-## Eliminar cuenta
+Permite modificar información relacionada con una cuenta.
+
+---
+
+## Eliminar Cuenta
 
 Permite eliminar una cuenta registrada.
 
 ---
 
-# 🖥️ Ejecución del Proyecto
+# 🖥️ Instalación y Ejecución
 
-Para ejecutar el sistema:
+## Requisitos
 
-1. Descargar el proyecto.
+Tener instalado:
 
-2. Abrir la terminal en la carpeta del proyecto.
+- Python 3.x
+- Git
+- Visual Studio Code
 
-3. Ejecutar:
+---
+
+## Clonar el proyecto
+
+Ejecutar:
 
 ```bash
-python main.py
-```
-
----
-
-# 📋 Menú Principal
-
-El sistema presenta las siguientes opciones:
-
-```
-1. Registrar cliente
-2. Listar clientes
-3. Buscar cliente
-4. Actualizar cliente
-5. Eliminar cliente
-
-6. Crear cuenta
-7. Listar cuentas
-8. Buscar cuenta
-9. Actualizar cuenta
-10. Eliminar cuenta
-
-11. Salir
-```
-
----
-
-# 🌳 Control de Versiones
-
-El proyecto utiliza Git Flow para organizar el desarrollo.
-
-Ramas utilizadas:
-
-```
-main
-develop
-feature/registro-clientes
-feature/creacion-cuentas
-```
-
-Proceso utilizado:
-
-```
-Feature
-   |
-   ↓
-Pull Request
-   |
-   ↓
-Develop
-   |
-   ↓
-Main
-```
-
----
-
-# 🧪 Pruebas Realizadas
-
-Se realizaron pruebas de:
-
-✅ Registro de clientes  
-✅ Validación de documentos repetidos  
-✅ Consulta de clientes  
-✅ Actualización de información  
-✅ Eliminación de registros  
-✅ Creación de cuentas  
-✅ Consulta de cuentas  
-
----
-
-# 🚀 Mejoras Futuras
-
-Algunas funcionalidades que pueden agregarse:
-
-- Interfaz gráfica.
-- Conexión con una base de datos real.
-- Sistema de autenticación.
-- Roles de usuario.
-- Reportes bancarios.
-- Seguridad avanzada.
-- API web.
-
----
-
-# 📌 Conclusiones
-
-El desarrollo de la Plataforma Bancaria permitió aplicar conocimientos de programación orientada a objetos, manejo de archivos, estructuras de datos y control de versiones.
-
-El proyecto demuestra la importancia de organizar correctamente un sistema mediante módulos independientes, facilitando su mantenimiento y futuras ampliaciones.
-
----
-
-# 📄 Licencia
-
-Proyecto académico desarrollado para fines educativos.
-
----
-
-**SENA - Análisis y Desarrollo de Software**  
-**Ficha: 3406451**
+git clone URL_DEL_REPOSITORIO
