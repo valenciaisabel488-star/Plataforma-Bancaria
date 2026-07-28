@@ -25,7 +25,6 @@ while True:
     print("-----------------------------------")
     print("11. Salir")
 
-
     opcion = input("\nSeleccione una opción: ")
 
 
